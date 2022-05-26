@@ -4,15 +4,43 @@
 
 
 <% @products.each do |p| %>
-<div class="col-md-3">
-  <%= p.title %>
-</p>
-<% end %>
+  <div class="col-md-3">
+    <div>
+      <%= p.title %>
+    </div>
 
+      <div>
+      <img src="<%= p.path_to_image %>">
+    </div>
+
+
+  <div>
+      <%= p.description %>
+    </div>
+
+  <div>
+      <%= p.size %>
+    </div>
+
+  <div>
+      <%= p.price %>
+    </div>
+
+  <div>
+      <%= p.title %>
+    </div>
+
+
+
+
+
+
+
+
+  </div>
+  <% end %>
 </div>
 
-
-
-
-
+</br>
+</br>
 <button type="button" class="btn btn-primary btn-lg" onclick="smth()">Click me</button>
