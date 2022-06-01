@@ -19,3 +19,8 @@ get '/about' do
 
 end
 
+post '/cart' do
+	erb :cart
+
+end
+
