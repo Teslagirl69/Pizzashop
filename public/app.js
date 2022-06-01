@@ -16,10 +16,15 @@ function add_to_cart(id)
   x = x * 1 + 1;
   window.localStorage.setItem(key, x);
 
-alert('Items in your cart' + cart_get_number_of_items()); //вывод количества item в корзине
+//alert('Items in your cart' + cart_get_number_of_items()); //вывод количества item в корзине
+update_orders_input()
 }
 
-
+function update_orders_input()
+{
+var orders = cart_get_orders();
+$('#orders_input').val(orders);
+}
 
 
 function cart_get_number_of_items()
