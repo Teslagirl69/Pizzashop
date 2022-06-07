@@ -72,7 +72,7 @@ function cart_get_orders()
 
     if(key.indexOf('product_') == 0)
     {
-      orders = orders + key + "=" + value + ",";
+      orders = orders + key + '=' + value + ',';
     }
   }
 

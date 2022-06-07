@@ -10,6 +10,14 @@ set :database, {adapter: "sqlite3", database: "pizzarshop.db"}
 class Product  < ActiveRecord::Base
 end
 
+
+
+class Order  < ActiveRecord::Base
+end
+
+
+
+
 get '/' do
 	@products = Product.all
 	erb :index
@@ -20,7 +28,12 @@ get '/about' do
 end
 
 post '/cart' do
-@orders_input = params[:orders]
+=begin
+  erb "hello"
+
+end
+=end
+@orders_input = params[:orders_input]
 @items = parse_orders @orders_input
 
 @items.each do |item|
@@ -32,8 +45,9 @@ erb :cart
 end
 
 
+
 def parse_orders orders_input
-  s1 = @orders_input.split(/,/)
+  s1 = orders_input.split(/,/)
   arr = []
   s1.each do |x|
     s2 = x.split(/=/)
