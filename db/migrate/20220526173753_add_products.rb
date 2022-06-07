@@ -35,5 +35,6 @@ class AddProducts < ActiveRecord::Migration[7.0]
     :path_to_image => '/Images/veg.jpg'
     })
 
-
+end
+end
 
