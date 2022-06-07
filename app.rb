@@ -27,12 +27,15 @@ get '/about' do
 
 end
 
-post '/cart' do
-=begin
-  erb "hello"
-
+post '/place_order' do
+@order = Order.create params[:order]
+erb "Thanks your order has been plased"
 end
-=end
+
+
+
+post '/cart' do
+
 @orders_input = params[:orders_input]
 @items = parse_orders @orders_input
 
