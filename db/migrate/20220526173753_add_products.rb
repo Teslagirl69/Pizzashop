@@ -15,7 +15,7 @@ class AddProducts < ActiveRecord::Migration[7.0]
 
     Product.create ({
     :title => 'Pepperoni',
-    :description => 'TThis is a pepperoni pizza with salami and cheese in tomato paste.',
+    :description => 'This is a pepperoni pizza with salami and cheese in tomato paste.',
     :price => 350,
     :size => 30,
     :is_spicy => true,

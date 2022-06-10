@@ -1,3 +1,5 @@
 
 first-visit-js/
 pizzarshop.db
+db/migrate/20220526173753_add_products.rb
+views/place_order.erb
