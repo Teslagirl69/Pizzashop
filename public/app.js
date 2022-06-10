@@ -22,14 +22,13 @@ update_orders_input()
  update_orders_button()
 }
 
+
+
 function update_orders_input()
 {
 var orders = cart_get_orders();
 $('#orders_input').val(orders);
 }
-
-
-
 
 function update_orders_button()
 {
@@ -77,4 +76,17 @@ function cart_get_orders()
   }
 
   return orders;
+}
+
+
+function cancel_order()
+{
+  window.localStorage.clear();
+
+  update_orders_input();
+  update_orders_button();
+
+  $('#cart').text('Your cart is now empty');
+
+  return false;
 }
